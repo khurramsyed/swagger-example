@@ -15,7 +15,7 @@ http://localhost:8080/api/getUser?userName=khurram
 ```
 
 
-## Access API Docs
+# Access API Docs
 
 You can access API docs using below url
 

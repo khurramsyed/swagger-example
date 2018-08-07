@@ -1,4 +1,8 @@
-# Maven Depenencies 
+# Project Description:
+
+This is sample project showing how to use swagger to generate API documentation
+
+## Maven Depenencies 
 
 Swagger needs two dependencies,  swagger and swagger ui.
 
@@ -17,7 +21,7 @@ Swagger needs two dependencies,  swagger and swagger ui.
 ```
 
 
-# Swagger Config
+## Swagger Config
 
 You will need to enable swagger using `@EnableSwagger2` annotation.
 
@@ -37,7 +41,7 @@ Also need to create Docket bean, I have created this inside SwaggerConfig class 
 
 ```
 
-# Running the application 
+## Running the application 
 
 ```shell
 mvn spring-boot:run 
@@ -46,7 +50,7 @@ mvn spring-boot:run
 Once application is running you can access the application using url 
 
 
-# Accessing the API 
+## Accessing the API 
 
 You can access the following url in the browser
 ```
@@ -54,7 +58,7 @@ http://localhost:8080/api/getUser?userName=khurram
 ```
 
 
-# Access API Docs
+## Access API Docs
 
 You can access API docs using below url
 

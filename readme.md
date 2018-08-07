@@ -1,3 +1,42 @@
+# Maven Depenencies 
+
+Swagger needs two dependencies,  swagger and swagger ui.
+
+```xml
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>2.7.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>2.7.0</version>
+		</dependency>
+```
+
+
+# Swagger Config
+
+You will need to enable swagger using `@EnableSwagger2` annotation.
+
+Also need to create Docket bean, I have created this inside SwaggerConfig class as follows:
+
+```java 
+
+ @Bean
+    public Docket api() {
+        return new Docket(DocumentationType.SWAGGER_2)
+                .apiInfo(DEFAULT_API_INFO)
+                .select()
+                .apis(RequestHandlerSelectors.any())
+                .paths(PathSelectors.any())
+                .build();
+    }
+
+```
+
 # Running the application 
 
 ```shell

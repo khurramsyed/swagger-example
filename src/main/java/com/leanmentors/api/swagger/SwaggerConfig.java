@@ -15,26 +15,26 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 public class SwaggerConfig {
 
-    public static final Contact DEFAULT_CONTACT = new Contact("Khurram Mahmood",
-                                                                "http://www.leanmentors.co.uk",
-                                                                "khurram.mahmood@leanmentors.co.uk");
+        public static final Contact DEFAULT_CONTACT = new Contact("Khurram Mahmood",
+                                                                    "http://www.leanmentors.co.uk",
+                                                                    "nouser@email.com");
 
 
 
-    private static final ApiInfo DEFAULT_API_INFO = new ApiInfoBuilder().title("Greetings ")
-                                                    .description("Khurram's Hello world Api Documentation")
-                                                    .version("1.0").contact(DEFAULT_CONTACT)
-                                                    .license("Aaapa Jee 2")
-                                                    .licenseUrl("https://my-license.com").
-                                                    build();
+        private static final ApiInfo DEFAULT_API_INFO = new ApiInfoBuilder().title("User API ")
+                                                        .description("User Api Documentation")
+                                                        .version("1.0").contact(DEFAULT_CONTACT)
+                                                        .license("Apache 2.0")
+                                                        .licenseUrl("https://my-license.com").
+                                                        build();
 
-    @Bean
-    public Docket api() {
-        return new Docket(DocumentationType.SWAGGER_2)
-                .apiInfo(DEFAULT_API_INFO)
-                .select()
-                .apis(RequestHandlerSelectors.any())
-                .paths(PathSelectors.any())
-                .build();
-    }
+        @Bean
+        public Docket api() {
+            return new Docket(DocumentationType.SWAGGER_2)
+                    .apiInfo(DEFAULT_API_INFO)
+                    .select()
+                    .apis(RequestHandlerSelectors.any())
+                    .paths(PathSelectors.any())
+                    .build();
+        }
 }

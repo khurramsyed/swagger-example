@@ -6,16 +6,16 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
-@ApiModel
 @AllArgsConstructor
+@ApiModel
 public class User {
 
-    @ApiModelProperty
+    @ApiModelProperty(notes = "userName of the user", required = true)
     private String userName;
 
-    @ApiModelProperty
+    @ApiModelProperty(notes ="given name of the user")
     private String firstName;
 
-    @ApiModelProperty
+    @ApiModelProperty(notes = "surName of the user")
     private String lastName;
 }

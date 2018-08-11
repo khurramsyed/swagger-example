@@ -2,7 +2,7 @@
 
 # Documenting Service API using Swagger
 
-This is sample project showing how to use swagger to generate API documentation
+This is a sample project showing how to use swagger to generate the API documentation
 
 ## Maven Depenencies 
 
@@ -54,7 +54,7 @@ Also need to create Docket bean, I have created this inside SwaggerConfig class 
     }
 ```
 
-A Docket bean will define the API.
+A Docket bean will define the API with sensible defaults.
 
 ## Running the application 
 
@@ -62,7 +62,6 @@ A Docket bean will define the API.
 mvn spring-boot:run 
 ```
 
-Once application is running you can access the application using url
 
 
 ## Access API Docs
@@ -73,7 +72,7 @@ You can access API docs using below url
 http://localhost:8080/v2/api-docs
 ```
 
-However you can see that its json being displayed in the browser, which is hardly human readable. This is where swagger ui will come handy,  you can access the ui using following link:
+However, you can see that its json being displayed in the browser, which is hardly human readable. This is where swagger ui will come in handy,  you can access the ui using following link:
 
 ```
 [http://localhost:8080/swagger-ui.html#!/](http://localhost:8080/swagger-ui.html#!/)
@@ -83,7 +82,7 @@ This should look something like below where we can see all the operations availa
 
 ![Swagger UI](./images/swaggerUI.png)
 
-As you can see, this is a very basic information here. Generally we need bit more context in the API documentation. For this we will start with changing the controller and provide more details about the API.
+As you can see, it is a very basic information here. Generally we need bit more context in the API documentation. For this, we will start with changing the controller and provide more details about the API.
 
 
 ## Customising the API Documentation
@@ -100,7 +99,7 @@ We can customise the controller with additional documentation about the purpose 
 ```
 ![Swagger UI](./images/controller_api_details.png)
 
-With this we have added the description of the API exposed by the controller as shown by red rectangle
+With this, we have added the description of the API exposed by the controller as shown by red rectangle
 
 ## Detailing the Operations
 
